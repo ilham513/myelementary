@@ -1,10 +1,14 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - MySchool Bootstrap Template</title>
+  <title>MyElementary</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -29,8 +33,8 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
-  * Template Name: MySchool
-  * Template URL: https://bootstrapmade.com/MySchool-free-medical-bootstrap-theme/
+  * Template Name: MyElementary
+  * Template URL: https://bootstrapmade.com/MyElementary-free-medical-bootstrap-theme/
   * Updated: Aug 07 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
@@ -47,14 +51,14 @@
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">MySchool</h1>
+          <h1 class="sitename">MyElementary</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="cta-btn d-none d-sm-block" href="#appointment">Login</a>
+        <a class="cta-btn d-none d-sm-block" href="<?=site_url('login')?>">Login</a>
 
       </div>
 
@@ -72,7 +76,7 @@
       <div class="container position-relative">
 
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-          <h2>WELCOME TO MySchool</h2>
+          <h2>WELCOME TO MyElementary</h2>
         </div><!-- End Welcome -->
 
         <div class="content row gy-4">
@@ -126,7 +130,7 @@
   <footer id="footer" class="footer light-background">
 
     <div class="container copyright text-center mt-4 d-none">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">MySchool</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">MyElementary</strong> <span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
