@@ -35,6 +35,6 @@ class Login extends CI_Controller {
 
 		//redirect
 		echo '<script>alert("berhasil logout")</script>';
-		redirect('/', 'refresh');
+		redirect(site_url(), 'refresh');
 	}
 }

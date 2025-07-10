@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>MyElementary</title>
+  <title>SMKN 3 KOTA BEKASI</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
-          <h1 class="sitename">MyElementary</h1>
+          <h1 class="sitename">SMKN 3 KOTA BEKASI</h1>
         </a>
 
         <nav id="navmenu" class="navmenu">
@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="container position-relative">
 
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-          <h2>WELCOME TO MyElementary</h2>
+          <h2 class="text-white bg-primary p-2">Aplikasi Penjadwalan SMKN 3 KOTA BEKASI</h2>
         </div><!-- End Welcome -->
 
         <div class="content row gy-4">
