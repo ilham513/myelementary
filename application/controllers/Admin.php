@@ -14,7 +14,7 @@ class Admin extends CI_Controller {
 	public function index()
 	{
 		$data['jumlah_karyawan'] = $this->crud_model->menghitung_jumlah_row('karyawan');
-		$data['jumlah_waktu'] = $this->crud_model->menghitung_jumlah_row('waktu');
+		$data['jumlah_penilaian'] = $this->crud_model->menghitung_jumlah_row('penilaian');
 
 		$this->load->view('admin_index.php', $data);
 	}
@@ -66,9 +66,22 @@ public function generate() {
 		$this->load->view('admin_waktu.php',$data);
 	}
 
+	public function penilaian()
+	{
+		$data['array_penilaian'] = $this->crud_model->get_penilaian_with_karyawan();
+
+		$this->load->view('admin_penilaian.php',$data);
+	}
+
 	public function waktu_add()
 	{
 		$this->load->view('admin_waktu_add.php');
+	}
+
+	public function penilaian_add()
+	{
+		$data['list_karyawan'] = $this->crud_model->mengambil_data('karyawan');
+		$this->load->view('admin_penilaian_add.php',$data);
 	}
 
 	public function jadwal_add()
@@ -104,6 +117,23 @@ public function generate() {
 		//redirect
 		redirect('/admin/waktu', 'refresh');
 
+	}
+
+	public function penilaian_add_go()
+	{
+		//variabel data
+		$data = array(
+			'id_karyawan' => $this->input->post('id_karyawan'),
+			'kinerja' => $this->input->post('kinerja'),
+			'kehadiran' => $this->input->post('kehadiran'),
+			'kreativitas' => $this->input->post('kreativitas')
+		);
+		
+		//tampilkan view
+		$this->crud_model->masukan_data('penilaian', $data);
+
+		//redirect
+		redirect('/admin/penilaian', 'refresh');
 	}
 
 	public function karyawan_add_go()
@@ -166,6 +196,16 @@ public function generate() {
 		$this->load->view('admin_waktu_edit', $data);
 	}	
 
+	public function penilaian_edit($id)
+	{
+		//load model crud
+		$data['array_penilaian'] = $this->crud_model->mengambil_data_id('penilaian','id_penilaian',$id);
+		$data['penilaian'] = $data['array_penilaian'][0];		
+		// var_dump($data);die();
+
+		$this->load->view('admin_penilaian_edit', $data);
+	}	
+
 	public function karyawan_edit($id_karyawan)
 	{
 		//load model crud
@@ -177,22 +217,21 @@ public function generate() {
 		$this->load->view('admin_karyawan_edit', $data);
 	}	
 
-	public function waktu_edit_go()
+	public function penilaian_edit_go()
 	{
-		// var_dump($_POST);
-
-		//variabel data edit
+		// Ambil data dari form
 		$data = array(
-			'hari' => $this->input->post('hari'),
-			'jam' => $this->input->post('jam')		
+			'kinerja' => $this->input->post('kinerja'),
+			'kehadiran' => $this->input->post('kehadiran'),
+			'kreativitas' => $this->input->post('kreativitas')
 		);
 
-		//load model mengubah data
-		$this->crud_model->mengubah_data_id('waktu', $data,'id',$this->input->post('id'));
-		
-		//redirect
-		redirect('admin/waktu', 'refresh');
-	}	
+		// Proses update ke database
+		$this->crud_model->mengubah_data_id('penilaian', $data, 'id_penilaian', $this->input->post('id_penilaian'));
+
+		// Redirect kembali ke halaman daftar penilaian
+		redirect('admin/penilaian', 'refresh');
+	}
 
 	public function karyawan_edit_go()
 	{

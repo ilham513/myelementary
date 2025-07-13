@@ -90,8 +90,8 @@
           </div>
           <div class="col col-stats ms-3 ms-sm-0">
             <div class="numbers">
-              <p class="card-category">Jam Mengajar</p>
-              <h4 class="card-title"><?=$jumlah_waktu?></h4>
+              <p class="card-category">Penilaian</p>
+              <h4 class="card-title"><?=$jumlah_penilaian?></h4>
             </div>
           </div>
         </div>

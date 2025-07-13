@@ -76,15 +76,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="container position-relative">
 
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
-          <h2 class="text-white bg-primary p-2">Aplikasi Penjadwalan SMKN 3 KOTA BEKASI</h2>
+          <h2 class="text-white bg-primary p-2">Aplikasi SPK SMKN 3 KOTA BEKASI</h2>
         </div><!-- End Welcome -->
 
         <div class="content row gy-4">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="why-box" data-aos="zoom-out" data-aos-delay="200">
-              <h3>Kenapa kita perlu aplikasi penjadawlan?</h3>
+              <h3>Apa itu Sistem Pendukung Keputusan (SKP)?</h3>
               <p>
-                Penjadwalan otomatis menghemat waktu dengan mengurangi pengaturan manual, mendeteksi konflik jadwal dan menawarkan alternatif, serta meningkatkan akurasi dengan mengurangi kesalahan manusia. Hal ini juga meningkatkan produktivitas dengan membebaskan waktu untuk tugas-tugas yang lebih penting dan memudahkan koordinasi antar anggota tim dengan menyediakan jadwal yang terkoordinasi dan dapat diakses oleh semua orang.
+                Sistem Pendukung Keputusan (SPK) adalah sistem informasi berbasis komputer yang membantu manajemen dan pengambil keputusan dalam menganalisis data dan model untuk memecahkan masalah kompleks dan semi-terstruktur.
               </p>
             </div>
           </div><!-- End Why Box -->
@@ -97,23 +97,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="300">
                     <i class="bi bi-clipboard-data"></i>
                     <h4>Menghemat Waktu</h4>
-                    <p>Mengotomatisasi penjadwalan pertemuan, tugas, atau aktivitas lain mengurangi waktu yang diperlukan untuk mengatur semuanya secara manual.</p>
+                    <p>Dengan mengotomatisasi analisis data, SPK mengurangi waktu yang diperlukan untuk mengambil keputusan dan meminimalkan biaya yang terkait dengan analisis manual.</p>
                   </div>
                 </div><!-- End Icon Box -->
 
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
                     <i class="bi bi-gem"></i>
-                    <h4>Menghindari Konflik Jadwal</h4>
-                    <p>Sistem penjadwalan otomatis dapat mendeteksi konflik dalam jadwal dan memberikan saran waktu alternatif yang lebih sesuai.</p>
+                    <h4>Meningkatkan Kualitas Keputusan</h4>
+                    <p>SPK membantu pengambil keputusan dengan menyediakan informasi yang relevan dan analisis data mendalam, yang memungkinkan pengambilan keputusan yang lebih baik dan berkualitas.</p>
                   </div>
                 </div><!-- End Icon Box -->
 
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="500">
                     <i class="bi bi-inboxes"></i>
-                    <h4>Memudahkan Koordinasi</h4>
-                    <p>Memungkinkan kolaborasi yang lebih baik antara anggota tim dengan menyediakan jadwal yang terkoordinasi dan dapat diakses oleh semua orang.</p>
+                    <h4>Meningkatkan Efisiensi Operasional</h4>
+                    <p>SPK dapat meningkatkan efisiensi operasional dengan memberikan rekomendasi dan solusi yang dioptimalkan, serta membantu alokasi sumber daya yang lebih baik.</p>
                   </div>
                 </div><!-- End Icon Box -->
 

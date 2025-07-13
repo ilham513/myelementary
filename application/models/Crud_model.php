@@ -36,6 +36,15 @@ class Crud_model extends CI_Model{
 		return $query->result();
 	}
 
+	public function get_penilaian_with_karyawan()
+    {
+        $this->db->select('penilaian.*, karyawan.nama_karyawan');
+        $this->db->from('penilaian');
+        $this->db->join('karyawan', 'penilaian.id_karyawan = karyawan.id_karyawan');
+        $query = $this->db->get();
+        return $query->result();
+    }
+	
 	public function mengambil_data_join_interval($nama_tabel, $tanggal_awal, $tanggal_akhir)
 	{
 		$tanggal_awal = "'$tanggal_awal 00:00:01'";

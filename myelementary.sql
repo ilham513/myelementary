@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2025 at 01:39 PM
+-- Generation Time: Jul 13, 2025 at 09:51 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -119,6 +119,36 @@ INSERT INTO `karyawan` (`id_karyawan`, `nama_karyawan`, `jenis_kelamin`, `nomor_
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `penilaian`
+--
+
+CREATE TABLE `penilaian` (
+  `id_penilaian` int(11) NOT NULL,
+  `id_karyawan` int(11) NOT NULL,
+  `kinerja` enum('Sangat Baik','Baik','Cukup') NOT NULL,
+  `kehadiran` enum('Lengkap','Kurang') NOT NULL,
+  `kreativitas` enum('Tinggi','Sedang','Rendah') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `penilaian`
+--
+
+INSERT INTO `penilaian` (`id_penilaian`, `id_karyawan`, `kinerja`, `kehadiran`, `kreativitas`) VALUES
+(1, 1, 'Sangat Baik', 'Lengkap', 'Tinggi'),
+(2, 2, 'Baik', 'Kurang', 'Sedang'),
+(3, 3, 'Cukup', 'Lengkap', 'Rendah'),
+(4, 4, 'Baik', 'Lengkap', 'Sedang'),
+(5, 5, 'Sangat Baik', 'Kurang', 'Tinggi'),
+(6, 6, 'Baik', 'Lengkap', 'Tinggi'),
+(7, 7, 'Cukup', 'Kurang', 'Sedang'),
+(8, 8, 'Sangat Baik', 'Lengkap', 'Sedang'),
+(9, 9, 'Baik', 'Kurang', 'Rendah'),
+(10, 10, 'Cukup', 'Lengkap', 'Tinggi');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -218,6 +248,13 @@ ALTER TABLE `karyawan`
   ADD PRIMARY KEY (`id_karyawan`);
 
 --
+-- Indexes for table `penilaian`
+--
+ALTER TABLE `penilaian`
+  ADD PRIMARY KEY (`id_penilaian`),
+  ADD KEY `id_karyawan` (`id_karyawan`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -252,6 +289,12 @@ ALTER TABLE `karyawan`
   MODIFY `id_karyawan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
+-- AUTO_INCREMENT for table `penilaian`
+--
+ALTER TABLE `penilaian`
+  MODIFY `id_penilaian` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
@@ -262,6 +305,16 @@ ALTER TABLE `user`
 --
 ALTER TABLE `waktu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `penilaian`
+--
+ALTER TABLE `penilaian`
+  ADD CONSTRAINT `penilaian_ibfk_1` FOREIGN KEY (`id_karyawan`) REFERENCES `karyawan` (`id_karyawan`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

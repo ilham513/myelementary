@@ -18,21 +18,21 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=site_url('admin/waktu')?>">
-                  <i class="fas fa-clock"></i>
-                  <p>Jam Mengajar</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="<?=site_url('admin/karyawan')?>">
                   <i class="fas fa-user"></i>
                   <p>Guru</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?=site_url('admin/jadwal')?>">
-                  <i class="fas fa-table"></i>
-                  <p>Jadwal</p>
+                <a href="<?=site_url('admin/penilaian')?>">
+                  <i class="fas fa-copy"></i>
+                  <p>Penilaian</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?=site_url('keputusan/cetak_pdf')?>">
+                  <i class="fas fa-print"></i>
+                  <p>SPK</p>
                 </a>
               </li>
             </ul>
